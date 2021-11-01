@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker {image: 'python:3.7'}
+        docker { image 'python:3.7'}
     }
     stages {
         stage('Stage 1') {
@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Print') {
             steps {
-                python demo.py
+                sh 'python demo.py'
             }
         }
     }
